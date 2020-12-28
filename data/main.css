@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+body {
+  font-family: Raleway;
+}
+
+table, th, td {
+  border: 1px solid;
+}
+
+#coll {
+ border-collapse: collapse;
+}
+
+#sepa
+{ border-collapse: separate; margin-top: 2em;
+}
+
+caption {
+  text-align: left;
+}
