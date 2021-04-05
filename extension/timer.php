@@ -2,7 +2,7 @@
 	/* Launchdate from UTC in Berlin*/
 	$date = new DateTime($launch_time_utc);
 	$date->setTimezone(new DateTimeZone('Europe/Berlin'));
-	$utc_timestamp = date_format($date, 'm.d.Y - H:i');
+	$utc_timestamp = date_format($date, 'd.m.Y - H:i');
 	$utc_timestamp_count = date_format($date, 'd M, Y H:i');
 ?>
 
