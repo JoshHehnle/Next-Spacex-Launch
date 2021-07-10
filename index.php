@@ -10,6 +10,11 @@
   $launch_misson_name = $json_a['name']; // get the mission name
   $launch_time_utc = $json_a['date_utc']; // get the launchtime
   $launch_patch = $json_a['links']['patch']['small']; // get the missionpatch
+  $date_precision = $json_a['date_precision']; // get the date precision
+
+  if ($date_precision == "month") {
+      $date_precision_def = "month";
+  }
 
   /* Include the Informations about the Payload and the timer */
   include "extension/timer.php"; // Include the Timer
@@ -26,12 +31,25 @@
   <head>
     <meta charset="utf-8">
     <title> - Upcoming Launch by SpaceX - </title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="data/main.css">
   </head>
   <body>
     <center>
-      <h2 id="launchcountdown">Launchcountdown</h2>
-      <h3 id="launch_timer"></h3>
+
+    <?php
+        if ($date_precision_def == "month") {
+        	echo "<h2 id='launchcountdown'>Launchcountdown</h2>
+                <h3> Unfortunately there is no exact date yet</h3>";
+          $utc_timestamp = "Unfortunately there is no exact date yet";      
+        } else {
+          echo "<h2 id='launchcountdown'>Launchcountdown</h2>
+                <h3 id='launch_timer'></h3>";
+        }
+      ?>
+
       <br><br><br><br>
 
       <!-- Display the Payloadinformations -->
