@@ -26,67 +26,102 @@
   }
 ?>
 
-<!DOCTYPE html>
-<html lang="de" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title> - Upcoming Launch by SpaceX - </title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=1">
+<link rel="stylesheet" href="data/main.css">
 
-    <link rel="stylesheet" href="data/main.css">
-  </head>
-  <body>
-    <center>
+<div class="haze">
+</div>
 
-    <?php
+<div id="ivgb" class="row">
+  <div class="cell">
+    <div id="i73e">
+      <h2>Launchcountdown
+      </h2>
+    </div>
+    <div id="ilvs">
+
+      <?php
         if ($date_precision_def == "month") {
-        	echo "<h2 id='launchcountdown'>Launchcountdown</h2>
-                <h3> Unfortunately there is no exact date yet</h3>";
-          $utc_timestamp = "Unfortunately there is no exact date yet";      
+        	echo "<h3> Unfortunately there is no exact date yet</h3>";
+          $utc_timestamp = "Unfortunately there is no exact date yet";
         } else {
-          echo "<h2 id='launchcountdown'>Launchcountdown</h2>
-                <h3 id='launch_timer'></h3>";
+          echo "<h3 id='launch_timer'></h3>";
         }
       ?>
-
-      <br><br><br><br>
-
-      <!-- Display the Payloadinformations -->
-      <h2 id="payload">Payloadinformations</h2>
-      <table>
-        <tr>
-          <th><b>Payload Type</b></th>
-          <th>Orbit</th>
-          <th>Customer</th>
-        </tr>
-        <tr>
-          <td><?php echo $payload_type; ?></td>
-          <td><?php echo $payload_orbit; ?></td>
-          <td><?php echo $payload_customer; ?></td>
-        </tr>
-      </table>
-      <br><br><br><br>
-
-      <!-- Display the Main-launchinformations -->
-      <h2 id="launchinfos">Launchinformations</h2>
-      <table>
-        <tr>
-          <th><b>Flight Number</b></th>
-          <th>Mission Name</th>
-          <th>Launchtime</th>
-        </tr>
-        <tr>
-          <td><?php echo $launch_flight_number; ?></td>
-          <td><?php echo $launch_misson_name; ?></td>
-          <td><?php echo $utc_timestamp; ?></td>
-        </tr>
-      </table>
-      <br><br><br><br>
-
-      <!-- Display the other Launchinformations -->
-      <h2 id="other">Other Launchinformations</h2>
-      <p><?php echo $details; ?></p>
-    </center>
-  </body>
-</html>
+    </div>
+    <div class="row">
+      <div id="ilnwe" class="cell">
+      </div>
+    </div>
+  </div>
+</div>
+<div id="i8h5d">
+</div>
+<div id="im1vx">
+  <h2 id="izpvn">Launchinfromations
+  </h2>
+</div>
+<div id="ipvz" class="row">
+  <div id="izkzx" class="cell">
+    <div id="ie3yg">
+      <b id="igqag">Flight Number
+      </b>
+    </div>
+    <div id="iy6h6"><?php echo $launch_flight_number; ?>
+    </div>
+  </div>
+  <div id="i1j02" class="cell">
+    <div id="in4do">
+      <b id="is2bk">Mission Name
+      </b>
+    </div>
+    <div id="ipcdb"><?php echo $launch_misson_name; ?>
+    </div>
+  </div>
+  <div id="i60ky" class="cell">
+    <div id="i3d65">
+      <b id="ifa9b">Launchtime
+      </b>
+    </div>
+    <div id="izx4b"><?php echo $utc_timestamp; ?>
+    </div>
+  </div>
+</div>
+<div id="ix1bl">
+  <h2 id="i1bsh">Payloadinformations
+  </h2>
+</div>
+<div class="row" id="iw6pe">
+  <div class="cell">
+    <div id="i41u1">
+      <b>Payload Type
+      </b>
+    </div>
+    <div id="ilcig"><?php echo $payload_type; ?>
+    </div>
+  </div>
+  <div class="cell" id="ibt9q">
+    <div id="i0682">
+      <b>Orbit
+      </b>
+    </div>
+    <div id="ionu8"><?php echo $payload_orbit; ?>
+    </div>
+  </div>
+  <div class="cell" id="ik2wi">
+    <div id="i2zhg">
+      <b>Customer
+      </b>
+    </div>
+    <div id="iaq32"><?php echo $payload_customer; ?>
+    </div>
+  </div>
+</div>
+<div id="iysap" class="row">
+  <h2 id="i8umx">Other Launchinfromations
+    <br/>
+  </h2>
+  <div id="ixbo3"><?php echo $details; ?>
+  </div>
+</div>
